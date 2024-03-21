@@ -1,0 +1,121 @@
+#jms_ajax_search {   
+	float: right;
+	position: relative;
+	margin-top: 45px;
+}
+.search-box > a {
+    float: right;
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 39px;
+    text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+#ajax_search {
+    border: 1px solid #eee;
+    border-radius: 0;
+    color: #fff;
+    float: left;
+    font-size: 0.92em;
+    height: 40px;
+    padding: 0 10px;
+    width: 250px;
+}
+#search_result {
+    right: 0;
+    position: absolute;
+    top: 67px;
+    width: 290px;
+    z-index: 1000;
+}
+#search_result .result_div {    
+    background: #010514;
+    border-top: 5px solid #039aff;
+    color: #ddd;
+    float: left;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 5px 30px 5px;
+    position: relative;
+    width: 100%;
+    margin-top: 13px;
+}
+.navbar_fixed #search_result .result_div {
+    margin-top: -20px;
+}
+#search_result .result_div .item:last-child {
+    border-bottom: 0;
+}
+
+#search_result .result_div:after {
+    content: "";
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #039aff;
+    position: absolute;
+    top: -13px;
+}
+#search_result .result_div .results{}
+#search_result .result_div .item {
+    border-bottom: 1px solid #272a37;
+    float: left;
+    padding: 25px 0;
+    width: 100%;
+}
+#search_result .result_div .first-item {
+	padding: 0px 0px 12px 0px;
+	border-top:0px;
+}
+#search_result .result_div .item .left-img {
+    border:1px solid #444;
+    float: left;
+    margin-right: 5%;
+    padding: 0px;
+    width: 40%;
+}
+#search_result .result_div .item .left-img img{
+	max-width:100%;
+}
+#search_result .result_div .right-info {
+    float: left;
+    width: 50%;
+}
+
+#search_result .result_div a{	
+    font-size: 0.92em;
+	font-weight:400;
+    line-height: 20px !important;
+    text-transform: none;
+	color: #ddd;
+}
+#search_result .result_div .price {
+    float: left;
+    font-size: 1.07em;
+    width: 100%;
+	font-weight:400;
+}
+#search_result .result_div .price .label {
+    color: #777;
+    float: left;
+    line-height: 22px;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+#search_result .result_div .price .value{}
+#search_result .result_div .desc {
+    color: #999;
+    float: left;
+    font-size: 0.92em;
+    line-height: 16px;
+    width: 100%;
+}
+#search_result .result_div .desc p{
+	padding:0;
+	margin:0;
+}
+#search_result .result_div .right-info.full{
+	width:100%;
+}
