@@ -1,0 +1,45 @@
+.jms_testimonials {
+    text-align: center;
+    display: inline-block;
+	margin: 40px 0 70px;
+    width: 100%;
+}
+.testimonials_img {
+    display: inline-block;
+}
+.item-info {
+    margin-bottom: 10px;
+	padding:10px;
+}
+.itemsContent {
+    float: left;
+    width: 50%;
+}
+.item-info img {
+    width: 100%;
+}
+
+.btn-check {
+    border: medium none !important;
+    box-shadow: none !important;
+}
+.main_img img {
+    width: 100%;
+}
+.home_deli {
+    text-align: center;
+}
+
+.footer_deli {
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 10px;
+}
+.check {
+    display: inline-block;
+    padding: 0 9px;
+}
+
+
+

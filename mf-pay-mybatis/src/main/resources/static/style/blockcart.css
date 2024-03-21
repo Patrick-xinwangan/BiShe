@@ -1,0 +1,107 @@
+
+.shoppingcart-box .last_item, .shoppingcart-box .item {
+    border-bottom: 1px solid #d6d6d9;
+    overflow: hidden;
+    padding: 20px 0;
+    position:relative;
+	min-width:220px;
+}
+.shoppingcart-box .first_item {
+	border-bottom: 1px solid #d6d6d9;
+    display: inline-block;
+    padding: 30px 0;
+    position: relative;
+    width: 100%;
+}
+.shoppingcart-box .preview-image {
+    display: inline-block;
+    float: left;
+    width: 100px;
+	margin-right: 10px;
+}
+.shoppingcart-box .preview-image img {
+	max-width:100%;
+}
+.shoppingcart-box .description {
+    text-align: left;
+}
+#cart_block_list .remove_link {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 8px;
+}
+#cart_block_list {
+    max-height: 240px;
+    overflow: auto;
+    padding: 0px 30px;
+}
+.ajax_cart_block_remove_link > span {
+    font-family: "FontAwesome";
+    font-size: 12px;
+}
+.ajax_cart_quantity {
+	background:#039aff;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 0.84em;
+    height: 15px;
+    line-height: 15px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 15px;	
+}
+.shoppingcart-box .total, .shoppingcart-box .shipping {
+	color: #039aff;
+    font-size: 1em;
+    padding: 6px 30px 12px;
+    text-transform: capitalize;
+    text-align: left;
+    font-weight: bold;
+}
+.shoppingcart-box .total span{
+	float:right;
+	color:#039aff;		
+	font-size:1em;
+}
+
+.shoppingcart-box .shipping span {
+	float:right;
+	color:#000;		
+	font-size:1em;
+}
+.shoppingcart-box .description a {
+	line-height:20px!important;
+	text-transform:none;
+	color:#DDD;
+	font-family:montserrat;
+	font-size:0.92em;
+	padding:0px!important;
+}
+#cart_block_list .quantity-formated {
+	color: #000;
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+.quantity-formated .quantity {
+	font-size:0.92em
+}
+.price-quantity {
+	 margin: 14px 0 8px;
+}
+#cart_block_list .price {
+	color: #039aff;
+    font-size: 14px;
+    font-family: "Racing Sans One";
+}
+.ajax_cart_no_product {
+	color: #039aff;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+	padding: 30px 30px 0 30px;
+}

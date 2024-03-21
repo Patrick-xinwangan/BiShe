@@ -1,0 +1,399 @@
+/**
+ * @package Jms Drop Megamenu
+ * @version 1.0
+ * @Copyright (C) 2009 - 2013 Joommasters.
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ * @Website: http://www.joommasters.com
+**/
+.topnav .jms-megamenu {
+	position:static;	
+	float: left;
+}
+.topnav .jms-megamenu .nav {
+}
+.topnav .jms-megamenu .nav > li {
+	float:left;
+    padding: 0;
+    height:125px;
+    position:static;    
+}
+.topnav a {
+	color: #fff;
+}
+.topnav .jms-megamenu .nav > li > a {
+	font-family: "Racing Sans One";
+    font-size: 1.43em;
+    padding: 0 25px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    line-height: 125px;
+}
+
+.topnav .jms-megamenu .nav > li > a > .icon {
+ 	bottom: -1px;
+    font-size: 1.12em;
+    line-height: 0.3em;
+    margin-left: 1px;
+    position: relative;
+}    
+.topnav .jms-megamenu .nav > li:first-child > a {
+    border-left: medium none;    
+}
+
+.topnav .jms-megamenu .nav > li.active,
+.topnav .jms-megamenu .nav > li.open {	
+	position:static;
+}
+.topnav .jms-megamenu .nav > li.active:hover,
+.topnav .jms-megamenu .nav > li:hover {
+	
+}
+.topnav .jms-megamenu .nav > li.active > a {
+	color:#039aff;
+}
+.topnav .jms-megamenu .nav > li > a:hover,
+.topnav .jms-megamenu .nav > li.open > a,
+.topnav .jms-megamenu .nav > li:hover > a {	 
+	background:none!important;
+	color:#039aff;
+}
+
+.topnav .jms-megamenu .nav > li > .dropdown-menu {
+	padding: 0px;
+	margin: 0;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;	
+	opacity:0;
+	visibility:hidden;
+	top:100px;
+	display:block;
+	transition: top 0.4s ease 0s;
+	left:auto;
+	position:absolute;
+	z-index:2000;
+	background:#010514;
+}
+
+.topnav .jms-megamenu .nav > li.fw > .dropdown-menu {
+	left:0px!important;
+	right:0px;
+}
+.topnav .dropdown-inner {
+	padding:10px 30px;
+}
+.topnav .jms-megamenu .nav > li.active {	
+}
+.topnav .jms-megamenu .nav > li.haschild.open > a:after,
+.topnav .jms-megamenu .nav > li.haschild:hover > a:after {
+	border-bottom: 10px solid #039aff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: 0px;
+    content: "";
+    left: 50%;
+    margin-left: -9px;
+    position: absolute;
+}
+
+.topnav .jms-megamenu .nav > li.open > .dropdown-menu,
+.topnav .jms-megamenu .nav > li:hover > .dropdown-menu {
+	display:block;
+	position:absolute;
+	top:73px;
+	left:auto;
+	right: auto;
+	z-index:2001;
+	opacity:1;
+	visibility:visible;
+	font-size:1.07em;		
+} 
+/****** SLIDEDOWN EFFECT **********/
+.topnav.slidedown .jms-megamenu .nav > li > .dropdown-menu {	
+	top:125px;
+	margin-top:-20px;
+	opacity:0;
+	visibility:hidden;	
+	transition: margin-top 0.5s;	
+}
+.topnav.slidedown .jms-megamenu .nav > li.open > .dropdown-menu,
+.topnav.slidedown .jms-megamenu .nav > li:hover > .dropdown-menu {		
+	top:125px;
+	margin-top:0px;
+	visibility:visible;
+	opacity:0.95;
+	border-top: 5px solid #039aff;
+	border-right: 0;
+    border-left: 0;
+	border-bottom: 0;
+}
+/****** Fade EFFECT **********/
+.topnav.fade .jms-megamenu .nav > li > .dropdown-menu {	
+	top:73px;	
+	opacity:0;
+	visibility:hidden;	
+	transition: opacity 0.5s;	
+}
+.topnav.fade .jms-megamenu .nav > li.open > .dropdown-menu,
+.topnav.fade .jms-megamenu .nav > li:hover > .dropdown-menu {		
+	top:73px;	
+	visibility:visible;
+	opacity:1;
+}
+.topnav .mega-row {
+	clear:both;	
+}
+.topnav .mega-col {
+	float:left;
+	max-width:250px;
+	margin:0px;
+}
+.topnav .mega-col:first-child {
+	border-left:0px;
+}
+.topnav .no-mega .mega-col {
+	margin:0px 0px;
+}
+.topnav .mega-nav {
+	list-style: none outside none;
+    margin: 0px;
+    padding: 0;    
+    min-width:140px;
+}
+.topnav .no-mega .mega-nav {
+	margin:0px 0px;
+	max-width:none!important;
+}
+
+.topnav .no-mega > div.row:last-child > div > ul > li:last-child {
+	border-bottom:none;
+}
+.topnav .mega-nav > li {
+	list-style:none;
+	display:block;	
+}
+.topnav .mega-nav > li:last-child {	
+}
+.topnav .mega-nav > li:first-child > ul li:first-child {	
+}
+.topnav .mega-nav > li.group:first-child > ul li:first-child {
+	border-bottom:none;
+}
+.topnav .mega-nav > li > ul {
+	float:left;
+	width:100%;
+}
+.topnav .mega-nav > li > ul > li > ul > li a,
+.topnav .mega-nav > li > ul > li > a,
+.topnav .mega-nav > li > a {	
+    color: #ffffff;
+    display: block;
+    text-decoration: none;    
+    outline:none;
+    line-height:2.83;
+    font-size:0.92em;	
+    font-weight:400;        
+}
+
+.topnav .mega-nav > li > ul > li > ul > li.open a,
+.topnav .mega-nav > li > ul > li.open > a,
+.topnav .mega-nav > li.open > a,
+.topnav .mega-nav > li > ul > li > ul > li a:hover,
+.topnav .mega-nav > li > ul > li > a:hover,
+.topnav .mega-nav > li > a:hover {
+	color:#039aff;
+}
+.topnav .mega-nav > li > ul > li.group:after,
+.topnav .mega-nav > li.group:after {
+	content:none!important;
+}
+.topnav .mega-nav > li > ul > li.group > a,
+.topnav .mega-nav > li.group > a {		
+	display:block;
+	float:none;
+	color:#FFF;		
+	background:none;
+	padding-left:0px;
+	font-weight:700;
+	font-size:1.07em;	
+	text-transform:uppercase;
+}
+
+.topnav .mega-nav > li > ul > li.group > a, 
+.topnav .mega-nav > li.group > a {
+    font-family: "Racing Sans One";
+    font-size: 16px;
+    text-transform: none;
+    color: #039aff;
+	height:71px;
+}
+.topnav .mega-nav > li > ul > li.group > a:hover,
+.topnav .mega-nav > li.group > a:hover {
+	background:none!important;	
+}
+.topnav .dropdown-menu .row {	 
+}
+.topnav .dropdown-menu .row:last-child {
+	 margin-bottom:0px;
+}
+.topnav .mod-content {
+	float:left;
+	clear:both;
+	margin:10px 0px 0px 0px;		
+	font-size:0.92em;
+	color:#CBCBCB;	
+	width:100%;
+}
+.topnav .mod-content img {
+	max-width:100%;
+}
+.topnav .mega-nav .title_block {
+	display:none;
+}
+.topnav .mega-child-icon {	
+    margin-left:10px;
+    font-size:1.38em;
+    display:none;
+}
+.topnav .mega-nav > li > ul {	
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+.topnav .no-mega .mega-nav > li > ul {
+	left:90%;
+	display:block;	
+	position:absolute;
+	margin-left:30px;
+	opacity:0;
+	visibility:hidden;
+	top:-3px;	
+}
+.topnav .no-mega .mega-nav > li.open {
+	position:relative;	
+}
+.topnav .no-mega .mega-nav > li:hover > ul,
+.topnav .no-mega .mega-nav > li.open > ul {
+	background: #010514;		
+	display:block;		
+	z-index:2000;	    
+    transition: all 300ms ease 0s;
+    margin-left:0px;
+    opacity:1;
+	visibility:visible;
+	padding:15px 30px;	
+	min-width: 200px;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+	background-color:transparent!important;
+}
+.nav >li >a:focus,
+.nav > li > a:hover {	
+	background-color:transparent!important;
+}
+.topnav .mega-nav > li > ul > li {
+	display: inline-block;
+    list-style: outside none none;
+    width: 100%;
+}
+.topnav .no-mega .mega-nav > li > ul > li {
+    border-bottom: 1px solid #272a37;
+}
+.topnav .mega-nav > li > ul > li > ul > li.haschild,
+.topnav .mega-nav > li > ul > li.haschild,
+.topnav .mega-nav > li.haschild{		
+	
+}
+.topnav .mega-nav > li > ul > li > ul > li.haschild:after,
+.topnav .mega-nav > li > ul > li.haschild:after,
+.topnav .mega-nav > li.haschild:after { 
+	color: #fff;
+    content: "\f105";
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}	
+.topnav .mega-nav > li > ul > li > ul > li.open a, 
+.topnav .mega-nav > li > ul > li.open > a, 
+.topnav .mega-nav > li.open > a, 
+.topnav .mega-nav > li > ul > li > ul > li a:hover, 
+.topnav .mega-nav > li > ul > li > a:hover, 
+.topnav .mega-nav > li > a:hover{
+}
+.topnav .mega-nav > li > ul > li > ul > li.haschild:hover:after, 
+.topnav .mega-nav > li > ul > li.haschild:hover:after, 
+.topnav .mega-nav > li.haschild:hover:after{
+	color: #039aff;
+}
+.topnav ul.level1 > li.haschild:first-child {
+	background:none;
+}
+.topnav .no-mega ul.level1 > li.haschild:first-child {	
+}
+.topnav .mega-nav li.open {	
+}
+
+.topnav .mega-nav > li > ul > li:last-child {
+	border-bottom:none;
+}
+.topnav .mega-nav > li > ul > li > ul > li {
+	list-style:none;
+	float:left;
+	width:100%;
+	border-bottom:1px solid #333;
+}
+.topnav .mega-nav > li > ul > li > ul > li:last-child {
+	border-bottom:none;
+}
+.topnav .mega-nav > li > ul > li > ul {
+	display:none;
+}
+.topnav .mega-nav > li > ul > li.open {
+	position:relative;
+}
+.topnav .mega-nav > li > ul > li.open > ul {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:100%;
+	z-index:2000;
+	background:#333;
+	border: 1px solid #333;
+	border: 1px solid rgba(0,0,0,0.2);
+	width:200px;
+	padding:2px 0px!important;
+	font-weight:normal;
+}
+.haschild.group > ul li {
+    border-bottom: 1px solid #272a37;
+}
+.haschild.group > ul li:last-child {
+    border-bottom: none;
+}
+.dropdown-inner.no-mega > div {
+    border-bottom: 1px solid #272a37;
+}
+.dropdown-inner.no-mega > div:last-child{
+	border-bottom: 0;
+}
+
+@media (max-width: 991px) {
+	.topnav .jms-megamenu {
+		display:none;
+	}		
+	.topnav .mega-child-icon {
+		display:block;	
+	}
+}
+@media (min-width: 992px) {
+	.responsive #off-canvas-menu {
+		display:none;
+	}
+}

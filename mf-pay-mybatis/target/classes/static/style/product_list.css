@@ -1,0 +1,137 @@
+.content_scene_cat {
+	overflow:hidden;
+	position:relative;	
+	float:left;
+	width:100%;
+	min-height: 353px;
+}
+.content_scene_cat .page-heading {        
+	color:#FFF;
+	padding-bottom:10px;
+}
+
+.content_scene_cat .cat_desc {	
+}
+.content_scene_cat .container {
+    min-height: 353px;
+    position: relative;
+}
+.content_scene_cat .cat-info {	
+	bottom: 0;
+    color: #fff;
+    position: absolute;		
+}
+.content_scene_cat .cat-info .cat-info-inner {	
+	padding: 35px 0;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #039aff;    
+    color: #FFF;
+    cursor: default;
+    z-index: 2;
+    border:1px solid #039aff;
+}
+.pagination > li > a, .pagination > li > span {    
+    border: 1px solid #f0f0f0;
+    color: #039aff;
+    float: left;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 5px;
+    padding: 0 15px;
+    position: relative;
+    text-decoration: none;
+    width: auto;
+	font-size: 16px;
+}
+.pagination > li > a:focus, 
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    background-color: #039aff;    
+    border:1px solid #039aff;
+    color: #FFF;
+}
+#pagination_next > a,
+#pagination_previous > span {	
+	border-radius: 0;
+    line-height: 34px;
+    min-height: 35px;
+    padding: 0 15px;
+    width: auto;
+}
+.pagination > .disabled > a, 
+.pagination > .disabled > a:focus, 
+.pagination > .disabled > a:hover, 
+.pagination > .disabled > span, 
+.pagination > .disabled > span:focus, 
+.pagination > .disabled > span:hover {	
+	border:1px solid #e9e8e8;
+}
+.pagination li.pagination_previous span.fa{
+	float: left;
+	border-right: 1px solid #e9e8e8;
+    margin-right: 10px;
+    padding: 0 15px 0 0;
+}
+.pagination li.pagination_next span.fa {
+	float: right;
+	border-left: 1px solid #e9e8e8;
+    margin-left: 10px;
+    padding: 0 0 0 15px;
+}
+.pagination li.pagination_previous span.fa, .pagination li.pagination_next span.fa {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+}
+b.text {
+    font-size: 14px;
+    font-weight: 400;
+}
+#pagination label {
+	color: #2e2e2e;
+    float: left;
+    line-height: 26px;
+    margin-right: 10px;
+}
+.products-list-in-row .compare {
+	display:none;
+}
+.products-list-in-row .list_buttons .compare {
+	display:block!important;
+	float:right;
+}
+.compare {
+    margin-top: 10px;
+}
+.product-container p.compare input {
+    font-size: 0.92em;
+    margin: 3px 2px 0 0;
+}
+.compare label {
+    font-size: 0.92em;
+    font-weight: normal;
+}
+.filter_loader {	
+	background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+#product_list {
+	position:relative;
+}
+.filter_loader .img-loading {
+	position:absolute;
+	top:50px;
+	left:50%;
+	margin-left:-20px;
+}
+.products-list-in-row .info_center, .products-list-in-row .info_top{
+    display: none;
+}
