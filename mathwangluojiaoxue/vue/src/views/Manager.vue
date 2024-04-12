@@ -46,6 +46,12 @@
             <el-menu-item index="/examPlan">考试安排</el-menu-item>
             <el-menu-item index="/roomPlan">教室安排</el-menu-item>
           </el-submenu>
+          <el-submenu index="administration">
+            <template slot="title">
+              <i class="el-icon-menu"></i><span>行政管理</span>
+            </template>
+            <el-menu-item index="/college">学院信息</el-menu-item>
+          </el-submenu>
 
           <el-submenu index="user">·
             <template slot="title">
