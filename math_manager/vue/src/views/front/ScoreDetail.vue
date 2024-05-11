@@ -2,7 +2,7 @@
   <div class="main-content">
     <div style="width: 70%; margin: 30px auto; min-height: 1000px">
       <div style="text-align: center">
-        <el-button type="success">{{ courseData.type === 'VIDEO'? '视频课' : '图文课' }}</el-button>
+        <el-button type="success">{{ courseData.type === 'VIDEO'? '视频课' : (courseData.type === 'math'? '高等数学' :courseData.type === 'linear'? '线性代数' :courseData.type === 'statistics'? '概率论与数理统计' :'图文课' )}}</el-button>
         <span style="font-size: 20px; font-weight: 550; color: #333333; margin-left: 20px">{{ courseData.name }}</span>
       </div>
       <div style="text-align: center; margin-top: 15px">
@@ -15,6 +15,9 @@
         <div style="font-size: 18px; margin: 10px 0">课程资料</div>
         <div v-if="courseData.price === 0 || flag">
           <video :src="courseData.video" v-if="courseData.type === 'VIDEO'" controls style="width: 65%; height: 400px"></video>
+          <video :src="courseData.video" v-if="courseData.type === 'math'" controls style="width: 65%; height: 400px"></video>
+          <video :src="courseData.video" v-if="courseData.type === 'linear'" controls style="width: 65%; height: 400px"></video>
+          <video :src="courseData.video" v-if="courseData.type === 'statistics'" controls style="width: 65%; height: 400px"></video>
           <div style="margin-top: 10px">资料链接：<a :href="courseData.file" target="_blank">{{ courseData.file }}</a></div>
         </div>
         <div v-else>

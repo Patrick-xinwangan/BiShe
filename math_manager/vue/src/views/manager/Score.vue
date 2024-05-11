@@ -37,6 +37,9 @@
         <el-table-column prop="price" label="所需积分"></el-table-column>
         <el-table-column prop="video" label="课程视频" show-overflow-tooltip>
           <template v-slot="scope">
+            <el-button type="warning" size="mini" @click="down(scope.row.video)" v-if="scope.row.type === 'math'">点击下载</el-button>
+            <el-button type="warning" size="mini" @click="down(scope.row.video)" v-if="scope.row.type === 'linear'">点击下载</el-button>
+            <el-button type="warning" size="mini" @click="down(scope.row.video)" v-if="scope.row.type === 'statistics'">点击下载</el-button>
             <el-button type="warning" size="mini" @click="down(scope.row.video)" v-if="scope.row.type === 'VIDEO'">点击下载</el-button>
           </template>
         </el-table-column>
@@ -83,6 +86,9 @@
         </el-form-item>
         <el-form-item prop="type" label="课程类型">
           <el-select v-model="form.type" placeholder="请选择类型" style="width: 100%">
+            <el-option label="高等数学" value="math"></el-option>
+            <el-option label="线性代数" value="linear"></el-option>
+            <el-option label="概率论与数理统计" value="statistics"></el-option>
             <el-option label="视频课程" value="VIDEO"></el-option>
             <el-option label="图文课程" value="TEXT"></el-option>
           </el-select>
@@ -135,7 +141,7 @@ export default {
       editor: null,
       tableData: [],  // 所有的数据
       pageNum: 1,   // 当前的页码
-      pageSize: 5,  // 每页显示的个数
+      pageSize: 10,  // 每页显示的个数
       total: 0,
       name: null,
       recommend: null,

@@ -100,7 +100,7 @@ public class OrdersController {
                 .collect(Collectors.groupingBy(Orders::getCourseType, Collectors.reducing(0.0, Orders::getPrice, Double::sum)));
         for (String key : collect.keySet()) {
             Map<String, Object> map = new HashMap<>();
-            map.put("name", "VIDEO".equals(key) ? "视频课程" : "图文课程");
+            map.put("name", "VIDEO".equals(key) ? "视频课程" : "math".equals(key) ? "高等数学" : "linear".equals(key) ? "线性代数" : "statistics".equals(key) ? "概率论与数理统计" : "图文课程");
             map.put("value", collect.get(key));
             list.add(map);
         }

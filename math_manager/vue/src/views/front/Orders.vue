@@ -20,8 +20,11 @@
           </el-table-column>
           <el-table-column prop="courseType" label="课程类型">
             <template v-slot="scope">
+              <span v-if="scope.row.courseType === 'math'" style="color: #f71d0a">高等数学</span>
+              <span v-if="scope.row.courseType === 'linear'" style="color: #9233cb">线性代数</span>
+              <span v-if="scope.row.courseType === 'statistics'" style="color: #3d6eb6">概率论与数理统计</span>
               <span v-if="scope.row.courseType === 'VIDEO'" style="color: #b67259">视频课</span>
-              <span v-else style="color: #448231">图文课</span>
+              <span v-if="scope.row.courseType === 'TEXT'" style="color: #448231">图文课</span>
             </template>
           </el-table-column>
           <el-table-column prop="price" label="订单价格" width="100"></el-table-column>

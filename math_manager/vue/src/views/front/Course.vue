@@ -24,8 +24,11 @@
           </el-table-column>
           <el-table-column prop="type" label="课程类型">
             <template v-slot="scope">
+              <span v-if="scope.row.type === 'math'" style="color: #f71d0a">高等数学</span>
+              <span v-if="scope.row.type === 'linear'" style="color: #9233cb">线性代数</span>
+              <span v-if="scope.row.type === 'statistics'" style="color: #3d6eb6">概率论与数理统计</span>
               <span v-if="scope.row.type === 'VIDEO'" style="color: #b67259">视频课</span>
-              <span v-else style="color: #448231">图文课</span>
+              <span v-if="scope.row.type === 'TEXT'"style="color: #448231">图文课</span>
             </template>
           </el-table-column>
           <el-table-column prop="price" label="课程价格">
@@ -67,7 +70,7 @@ export default {
       user: JSON.parse(localStorage.getItem('xm-user') || '{}'),
       tableData: [],  // 所有的数据
       pageNum: 1,   // 当前的页码
-      pageSize: 6,  // 每页显示的个数
+      pageSize: 10,  // 每页显示的个数
       total: 0,
       name: null,
     }

@@ -95,12 +95,18 @@ public class WebController {
         List<String> xList = new ArrayList<>();
         List<Long> yList = new ArrayList<>();
 
+        xList.add("高等数学");
+        xList.add("线性代数");
+        xList.add("概率论");
         xList.add("视频课程");
         xList.add("图文课程");
         xList.add("积分兑换课程");
         xList.add("下载资源");
 
         List<Course> courses = courseService.selectAll(new Course());
+        yList.add(courses.stream().filter(x -> "math".equals(x.getType())).count());
+        yList.add(courses.stream().filter(x -> "linear".equals(x.getType())).count());
+        yList.add(courses.stream().filter(x -> "statistics".equals(x.getType())).count());
         yList.add(courses.stream().filter(x -> "VIDEO".equals(x.getType())).count());
         yList.add(courses.stream().filter(x -> "TEXT".equals(x.getType())).count());
         yList.add((long) scoreService.selectAll(new Score()).size());

@@ -8,7 +8,8 @@
     height: 60px;
     line-height: 60px;
     border-bottom: 1px solid #eee;
-    background: #286a46;
+    background: #008be6;
+            /*#286a46;*/
 }
 .front-header-left {
     width: 350px;
@@ -60,16 +61,18 @@
 }
 
 .el-menu-item {
-    background-color: #286a46 !important;
+    background-color: #006eff !important;
     color: white !important;
 }
 
 .el-menu {
-    background-color: #286a46;
+    background-color: #006eff;
+            /*#286a46;*/
 }
 
 .el-menu-item.is-active {
-    background-color: #378e5f !important;
+    background-color:  #2d5384 !important;
+    /*#378e5f*/
     font-weight: 550;
 }
 

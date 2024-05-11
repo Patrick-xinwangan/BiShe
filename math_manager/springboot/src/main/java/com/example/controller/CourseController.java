@@ -70,6 +70,14 @@ public class CourseController {
         return Result.success(course);
     }
 
+    @GetMapping("/recom")
+    public Result recom() {
+        List<Course> list = courseService.recom();
+        return Result.success(list);
+    }
+
+
+
     @GetMapping("/selectTop8")
     public Result selectTop8(@RequestParam String type) {
         List<Course> list = courseService.selectTop8(type);

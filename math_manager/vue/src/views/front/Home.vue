@@ -1,7 +1,7 @@
 <template>
   <div class="main-content">
     <div style="display: flex">
-      <div style="flex: 12%; height: 350px; background-color: #0c0c0c"></div>
+      <div style="flex: 12%; height: 350px; background-color: #010107"></div>
       <div style="flex: 76%">
         <el-carousel height="350px">
           <el-carousel-item v-for="item in carouselData">
@@ -9,26 +9,32 @@
           </el-carousel-item>
         </el-carousel>
       </div>
-      <div style="flex: 12%; height: 350px; background-color: #0c0c0c"></div>
+      <div style="flex: 12%; height: 350px; background-color: #010107"></div>
     </div>
     <div style="width: 76%; margin: 50px auto; min-height: 1000px">
       <div style="display: flex">
         <div style="flex: 1">
           <span style="font-size: 24px; color: #333333; margin-right: 50px">在线课程</span>
+          <el-button type="danger" @click="initValue('math')">高等数学</el-button>
+          <el-button type="primary" @click="initValue('linear')">线性代数</el-button>
+          <el-button type="info" @click="initValue('statistics')">概率论与数理统计</el-button>
           <el-button type="primary" @click="initValue('VIDEO')">视频课程</el-button>
           <el-button type="success" @click="initValue('SCORE')">积分专区</el-button>
           <el-button type="warning" @click="initValue('TEXT')">图文课程</el-button>
         </div>
+
         <div style="width: 300px">
           <el-button type="info" @click="signin">签到</el-button>
           <span style="margin-left: 30px; color: #12b127; font-weight: 550">上次签到：</span>
           <span style="color: #666666">{{ signInData?.time }}</span>
         </div>
+
       </div>
+
       <div style="display: flex; margin-top: 20px; height: 300px">
         <div style="flex: 1; margin-right: 10px; width: 0">
           <img :src="recommend.img" alt="" style="width: 100%; height: 270px; border-radius: 5px; cursor: pointer" @click="navTo(recommend.id)">
-          <div style="font-size: 15px; margin-top: 5px" class="overflowShow">{{ recommend.name }}</div>
+          <div style="font-size: 20px; margin-top: 5px" class="overflowShow">{{ recommend.name }}</div>
         </div>
         <div style="flex: 2; margin-left: 10px">
           <el-row :gutter="20">
@@ -53,10 +59,26 @@
           </el-row>
         </div>
         <div style="flex: 1; margin-left: 10px; width: 0">
-          <img :src="fileRecommend?.img" alt="" style="width: 100%; height: 270px; border-radius: 5px; cursor: pointer" @click="navToInformation(fileRecommend.id)">
+          <img :src ="fileRecommend?.img" alt="" style="width: 100%; height: 270px; border-radius: 5px; cursor: pointer" @click="navToInformation(fileRecommend.id)">
           <div style="font-size: 15px; margin-top: 5px" class="overflowShow">{{ fileRecommend?.name }}</div>
         </div>
       </div>
+
+      <div style="margin-top: 50px">
+        <span style="font-size: 24px; color: #333333; margin-right: 50px">智能推荐</span>
+        <div style="display: flex; margin-top: 20px; height: 300px">
+          <div style="flex-basis: auto; margin-right: 10px">
+            <el-row :gutter="20">
+              <el-col :span="6" style="margin-bottom: 35px" v-for="item in recomData">
+                <img :src="item.img" alt="" style="width: 100%; height: 100px; border-radius: 5px; border: 1px solid #cccccc; cursor: pointer" @click="navTo(item.id)">
+                <div style="color: #333333; margin-top: 10px" class="overflowShow">{{ item.name }}</div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
   </div>
@@ -73,22 +95,37 @@ export default {
           require('@/assets/imgs/lun-2.jpg'),
           require('@/assets/imgs/lun-3.jpg'),
           require('@/assets/imgs/lun-4.jpg'),
+          require('@/assets/imgs/lun-5.jpg'),
+
       ],
       type: 'VIDEO',
       recommend: {},
       rightData: [],
+      recomData: [],
       fileRecommend: {},
       leftData: [],
       signInData: {}
+
     }
   },
   mounted() {
     this.getData()
     this.getInformation()
     this.getSign()
+    this.recom()
   },
   // methods：本页面所有的点击事件或者其他函数定义区
   methods: {
+    recom(){
+      this.$request.get('/course/recom').then(res => {
+        if (res.code === '200') {
+          // 渲染数据到页面
+          this.recomData = res.data
+        } else {
+          this.$message.error(res.msg)
+        }
+      })
+    },
     getSign() {
       this.$request.get('/signin/selectByUserId?id=' + this.user.id).then(res => {
         if (res.code === '200') {
